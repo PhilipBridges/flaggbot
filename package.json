@@ -1,0 +1,16 @@
+{
+  "name": "flagg-bot",
+  "version": "1.0.0",
+  "description": "The one and only flagg bot",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "author": "Filly",
+  "dependencies": {
+    "discord.io": "^2.5.3",
+    "enmap": "^0.4.2",
+    "enmap-level": "^1.0.0",
+    "winston": "^2.4.0"
+  }
+}
