@@ -1,8 +1,9 @@
 const Discord = require('discord.io');
 const logger = require('winston');
-const auth = require('./auth.json');
+const auth = require('./auth.json')
 const fs = require('fs');
 let points = JSON.parse(fs.readFileSync("./points.json", "utf8"));
+require('events').EventEmitter.prototype._maxListeners = 100;
 
 // Configure logger settings
 logger.remove(logger.transports.Console);
@@ -12,8 +13,8 @@ logger.add(logger.transports.Console, {
 logger.level = 'debug';
 // Initialize Discord Bot
 var bot = new Discord.Client({
-  token: auth.token || process.env.token,
-  autorun: true
+  autorun: true,
+  token: "Mzg0NDgyODUwMDgwMjkyODc1.DPzd9A.sP3Gv6Fp7E_NCru9kxmXKBflnUw"
 });
 bot.on('ready', function (evt) {
   logger.info('Connected');
