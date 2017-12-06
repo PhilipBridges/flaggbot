@@ -196,14 +196,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
   }
 });
 
-bot.on('message', function (user, userID, channelID, message, evt) {
-  if (message === "!memes") {
-    bot.sendMessage({
-      to: channelID,
-      message: `Can you believe that Obama called Elizabeth Warren 'Pocahontas' at a ceremony with native americans?`
-    })
-  }
-});
 // User status triggers
 bot.on('presence', function (user, userID, status, game, event) {
   if (user === 'falg') {
