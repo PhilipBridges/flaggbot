@@ -52,7 +52,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         if (error) return console.error(error);
         //Create a stream to your file and pipe it to the stream
         //Without {end: false}, it would close up the stream, so make sure to include that.
-        fs.createReadStream('glacius.mp3').pipe(stream, { end: false });
+        fs.createReadStream('audio/glacius.mp3').pipe(stream, { end: false });
         //The stream fires `done` when it's got nothing else to send to Discord.
         stream.on('done', function () {
           bot.leaveVoiceChannel(voiceChannelID);
@@ -73,7 +73,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         if (error) return console.error(error);
         //Create a stream to your file and pipe it to the stream
         //Without {end: false}, it would close up the stream, so make sure to include that.
-        fs.createReadStream('stop.mp3').pipe(stream, { end: false });
+        fs.createReadStream('audio/stop.mp3').pipe(stream, { end: false });
         //The stream fires `done` when it's got nothing else to send to Discord.
         stream.on('done', function () {
           bot.leaveVoiceChannel(voiceChannelID);
@@ -94,7 +94,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         if (error) return console.error(error);
         //Create a stream to your file and pipe it to the stream
         //Without {end: false}, it would close up the stream, so make sure to include that.
-        fs.createReadStream('bob.mp3').pipe(stream, { end: false });
+        fs.createReadStream('audio/bob.mp3').pipe(stream, { end: false });
         //The stream fires `done` when it's got nothing else to send to Discord.
         stream.on('done', function () {
           bot.leaveVoiceChannel(voiceChannelID);
@@ -115,7 +115,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         if (error) return console.error(error);
         //Create a stream to your file and pipe it to the stream
         //Without {end: false}, it would close up the stream, so make sure to include that.
-        fs.createReadStream('shame.mp3').pipe(stream, { end: false });
+        fs.createReadStream('audio/shame.mp3').pipe(stream, { end: false });
         //The stream fires `done` when it's got nothing else to send to Discord.
         stream.on('done', function () {
           bot.leaveVoiceChannel(voiceChannelID);
@@ -136,7 +136,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         if (error) return console.error(error);
         //Create a stream to your file and pipe it to the stream
         //Without {end: false}, it would close up the stream, so make sure to include that.
-        fs.createReadStream('chad.wav').pipe(stream, { end: false });
+        fs.createReadStream('audio/chad.wav').pipe(stream, { end: false });
         //The stream fires `done` when it's got nothing else to send to Discord.
         stream.on('done', function () {
           bot.leaveVoiceChannel(voiceChannelID);
@@ -157,7 +157,7 @@ bot.on('message', function (user, userID, channelID, message, evt) {
         if (error) return console.error(error);
         //Create a stream to your file and pipe it to the stream
         //Without {end: false}, it would close up the stream, so make sure to include that.
-        fs.createReadStream('break.mp3').pipe(stream, { end: false });
+        fs.createReadStream('audio/break.mp3').pipe(stream, { end: false });
         //The stream fires `done` when it's got nothing else to send to Discord.
         stream.on('done', function () {
           bot.leaveVoiceChannel(voiceChannelID);
@@ -192,15 +192,6 @@ bot.on('message', function (user, userID, channelID, message, evt) {
     bot.sendMessage({
       to: channelID,
       message: `commands are: !chill, !stop !loog, !chad, !bob, !gear (only works in jonezone), !meme, !memecount`
-    })
-  }
-});
-
-bot.on('message', function (user, userID, channelID, message, evt) {
-  if (message === "!slurp") {
-    bot.sendMessage({
-      to: channelID,
-      message: `I am on a never ending quest to slurp every dude on the planet.`
     })
   }
 });
