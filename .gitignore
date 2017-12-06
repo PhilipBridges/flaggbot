@@ -1,8 +1,5 @@
 auth.json
 node_modules
 data
-./*.mp3
-.*.mp3
-mp3
-.mp3
-**/.mp3
+*.mp3
+*.wav
